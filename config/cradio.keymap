@@ -7,10 +7,17 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Home row mods macro
-#define HRML(k2,k3,k4) &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
-#define WHRML(k2,k3,k4) &ht LALT k2  &ht LGUI k3  &ht LCTRL k4
-#define WHRMR(k1,k2,k3) &ht RCTRL k1  &ht RGUI k2  &ht RALT k3
+/* #define HRML(k2,k3,k4) &ht LALT k2  &ht LCTRL k3  &ht LGUI k4 */
+/* #define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3 */
+/* #define WHRML(k2,k3,k4) &ht LALT k2  &ht LGUI k3  &ht LCTRL k4 */
+/* #define WHRMR(k1,k2,k3) &ht RCTRL k1  &ht RGUI k2  &ht RALT k3 */
+
+// Home row mods to match the shown layout
+#define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT k2  &ht LSHIFT k3  &ht LCTRL k4
+#define HRMR(k1,k2,k3,k4) &ht RCTRL k1 &ht RSHIFT k2 &ht RALT k3 &ht RGUI k4
+// Workman-style home row mods (mirrored, consistent with image)
+#define WHRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT k2  &ht LSHIFT k3  &ht LCTRL k4
+#define WHRMR(k1,k2,k3,k4) &ht RCTRL k1 &ht RSHIFT k2 &ht RALT k3 &ht RGUI k4
 
 #define MAC 0
 #define WIN 1
@@ -42,37 +49,68 @@
 
     keymap {
         compatible = "zmk,keymap";
+        /* default_layer { */
+        /*     bindings = < */
+        /* //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮ */
+        /* //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │ */
+        /*     &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P */
+        /* //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤ */
+        /* //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │ */
+        /*     &kp A     HRML(S,         D,         F)     &kp G          &kp H      HRMR(J,        K,           L)   &kp BSPC */
+        /* //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤ */
+        /* //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │ */
+        /*     &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER */
+        /* //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯ */
+        /*                                    &lt LEF ESC  &kp LSHIFT    &kp ENTER  &lt RIG SPACE */
+        /* //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯ */
+        /*     >; */
+        /* }; */
         default_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
-            &kp A     HRML(S,         D,         F)     &kp G          &kp H      HRMR(J,        K,           L)   &kp BSPC
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &lt LEF TAB  &kp LSHIFT    &kp SPACE  &lt RIG TAB
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+            //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
+                &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
+            //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+            //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
+                HRML(A, S, D, F)                            &kp G          &kp H      HRMR(J, K, L, SEMI)             &kp BSPC
+            //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+            //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
+                &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
+            //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                              &lt LEF ESC   &kp LSHIFT    &lt TRI ENTER  &lt RIG SPACE
+            //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
-
+        /* windows_layer { */
+        /*     bindings = < */
+        /* //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮ */
+        /* //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │ */
+        /*     &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P */
+        /* //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤ */
+        /* //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │ */
+        /*     &kp A    WHRML(S,         D,         F)     &kp G          &kp H      WHRMR(J,        K,         L)   &kp BSPC */
+        /* //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤ */
+        /* //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │ */
+        /*     &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER */
+        /* //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯ */
+        /*                                    &lt LEF ESC  &kp LSHIFT    &lt TRI ENTER  &lt RIG SPACE */
+        /* //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯ */
+        /*     >; */
+        /* }; */
         windows_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
-            &kp A    WHRML(S,         D,         F)     &kp G          &kp H      WHRMR(J,        K,         L)   &kp BSPC
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &lt LEF TAB  &kp LSHIFT    &kp SPACE  &lt RIG TAB
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+            //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
+                &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
+            //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+            //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
+                HRML(A, S, D, F)                            &kp G          &kp H      HRMR(J, K, L, SEMI)             &kp BSPC
+            //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+            //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
+                &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
+            //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                              &lt LEF ESC   &kp LSHIFT    &lt TRI ENTER  &lt RIG SPACE
+            //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
