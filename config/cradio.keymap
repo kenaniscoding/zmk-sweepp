@@ -74,8 +74,8 @@
             //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
                 HRML(A, S, D, F)                            &kp G          &kp H      HRMR(J, K, L, SEMI)             &kp BSPC
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-                &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
+            //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ? /    │
+                &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH
             //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &lt LEF ESC   &kp LSHIFT    &lt TRI ENTER  &lt RIG SPACE
             //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -106,8 +106,8 @@
             //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
                 HRML(A, S, D, F)                            &kp G          &kp H      HRMR(J, K, L, SEMI)             &kp BSPC
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-                &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
+            //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ? /    │
+                &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH
             //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &lt LEF ESC   &kp LSHIFT    &lt TRI ENTER  &lt RIG SPACE
             //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
