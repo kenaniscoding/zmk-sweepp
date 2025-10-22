@@ -5,7 +5,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-
+#include <dt-bindings/zmk/pointing.h>
 // Home row mods macro
 /* #define HRML(k2,k3,k4) &ht LALT k2  &ht LCTRL k3  &ht LGUI k4 */
 /* #define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3 */
@@ -24,6 +24,7 @@
 #define RIG 2
 #define LEF 3
 #define TRI 4
+#define FOR 5
 
 / {
     behaviors {
@@ -62,7 +63,7 @@
             //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ? /    │
                 &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH
             //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &lt LEF ESC   &kp LSHIFT    &lt TRI ENTER  &lt RIG SPACE
+                                              &lt LEF ESC   &kp LSHIFT    &lt FOR ENTER  &lt RIG SPACE
             //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -88,13 +89,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │   PSCRN  │
-            &trans    &trans     &trans     &trans     &trans          &trans     &trans     &trans     &trans      &kp PSCRN
+            &trans    &trans     &trans     &trans     &trans          &kp F10     &kp F11     &kp F12    &trans      &kp PSCRN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │ TAB      |   |  LEFT    │   DOWN   │   UP     │   RIGHT  │ BACKSPC  │
             &trans    &trans     &trans     &trans     &kp TAB          &kp LARW    &kp DARW   &kp UARW   &kp RARW   &kp BSPC 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &trans    &trans     &trans     &trans      &trans           &trans     &trans   &trans  &trans  &trans 
+        //│          │          │          │          │          │   │          │          │          │          │   DEL    │
+            &kp F1    &kp F2     &kp F3     &kp F4      &kp F5           &kp F6     &kp F7   &kp F8       &kp F9     &kp DEL 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -110,8 +111,8 @@
         //│  1       │  2       │  3       │  4       │  5       │   │   6      │  7       │  8       │     9    │  0       │
             &kp N1    &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │  DEL     │
-            &trans    &trans     &trans     &trans      &trans           &trans     &trans   &trans  &trans         &kp DEL 
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans    &trans     &trans     &trans      &trans           &trans     &trans   &trans  &trans         &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &kp RSHIFT     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -129,6 +130,23 @@
         //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
         //│  F9      │  F10     │  F11     │  F12      │  CLEAR BT  │   │ PROFILE 4  │ DEC BRIGHT │  MUTE    |           │ PREVSONG │
             &kp F9     &kp F10    &kp F11    &kp F12     &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &kp C_MUTE   &trans &kp C_PREV
+        //╰──────────┴──────────┴──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┴───────────┴──────────╯
+                                                &trans     &trans         &trans     &trans
+        //                                  ╰───────────┴──────────╯   ╰──────────┴────────────╯
+            >;
+        };
+
+        four_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬───────────┬────────────╮   ╭────────────┬────────────┬──────────┬───────────┬──────────╮
+        //│  F1      │  F2      │  F3      │  F4       │ PROFILE 0  │   │ PROFILE 2  │ TOGGLEOUT  │   VOL +  │ WINDOWS   │ NEXTSONG │
+            &trans     &mkp MB1 &mmv MOVE_UP   &mkp MB2     &trans     &trans  &trans &trans  &trans  &trans
+        //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
+        //│  F5      │  F6      │  F7      │  F8       │ PROFILE 1  │   │ PROFILE 3  │ INC BRIGHT │  VOL -   │           │PAUSEMUSIC│
+ &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans     &trans  &trans  &trans   &trans  &trans
+        //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
+        //│  F9      │  F10     │  F11     │  F12      │  CLEAR BT  │   │ PROFILE 4  │ DEC BRIGHT │  MUTE    |           │ PREVSONG │
+ &trans &msc SCRL_DOWN   &msc SCRL_UP     &trans     &trans            &trans  &trans  &trans   &trans &trans
         //╰──────────┴──────────┴──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┴───────────┴──────────╯
                                                 &trans     &trans         &trans     &trans
         //                                  ╰───────────┴──────────╯   ╰──────────┴────────────╯
