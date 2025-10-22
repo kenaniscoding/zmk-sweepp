@@ -139,13 +139,13 @@
         four_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬───────────┬────────────╮   ╭────────────┬────────────┬──────────┬───────────┬──────────╮
-        //│  F1      │  F2      │  F3      │  F4       │ PROFILE 0  │   │ PROFILE 2  │ TOGGLEOUT  │   VOL +  │ WINDOWS   │ NEXTSONG │
+        //│  F1      │  F2      │  F3      │  F4       │ PROFILE 0  │   │            │            │          │           │          │
             &trans     &mkp MB1 &mmv MOVE_UP   &mkp MB2     &trans     &trans  &trans &trans  &trans  &trans
         //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
-        //│  F5      │  F6      │  F7      │  F8       │ PROFILE 1  │   │ PROFILE 3  │ INC BRIGHT │  VOL -   │           │PAUSEMUSIC│
+        //│  F5      │  F6      │  F7      │  F8       │ PROFILE 1  │   │            │            │          │           │          │
  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans     &trans  &trans  &trans   &trans  &trans
         //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
-        //│  F9      │  F10     │  F11     │  F12      │  CLEAR BT  │   │ PROFILE 4  │ DEC BRIGHT │  MUTE    |           │ PREVSONG │
+        //│  F9      │  F10     │  F11     │  F12      │  CLEAR BT  │   │            │            │          |           │          │
  &trans &msc SCRL_DOWN   &msc SCRL_UP     &trans     &trans            &trans  &trans  &trans   &trans &trans
         //╰──────────┴──────────┴──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┴───────────┴──────────╯
                                                 &trans     &trans         &trans     &trans
