@@ -84,11 +84,11 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │   PSCRN  │
-            &trans    &trans     &trans     &trans     &trans          &kp F10     &kp F11     &kp F12    &trans      &kp PSCRN
+        //│ ~        │ @        │ _        │ |        │  "       │   │          │          │          │          │   PSCRN  │
+            &kp TILDE &kp AT     &kp UNDER   &kp PIPE   &kp DQT         &kp F10     &kp F11     &kp F12    &trans      &kp PSCRN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │ TAB      |   |  LEFT    │   DOWN   │   UP     │   RIGHT  │ BACKSPC  │
-            &trans    &trans     &trans     &trans     &kp TAB          &kp LARW    &kp DARW   &kp UARW   &kp RARW   &kp BSPC 
+        //│ <        │ >        │ {        │ }        │ TAB      |   |  LEFT    │   DOWN   │   UP     │   RIGHT  │ BACKSPC  │
+            &kp LT    &kp GT     &kp LBRC    &kp RBRC   &kp TAB         &kp LARW    &kp DARW   &kp UARW   &kp RARW   &kp BSPC 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │   DEL    │
             &kp F1    &kp F2     &kp F3     &kp F4      &kp F5           &kp F6     &kp F7   &kp F8       &kp F9     &kp DEL 
@@ -101,8 +101,8 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ;       │  `       │  -       │  =       │  '       │   │  \       │  [       │  ]       │  ;       │          │
-            &kp SEMI   &kp GRAVE  &kp MINUS  &kp EQUAL  &kp SQT       &kp BACKSLASH  &kp LBKT   &kp RBKT  &kp SEMI   &trans
+        //│  `       │  +       │  -       │  =       │  '       │   │  \       │  [       │  ]       │  :       │   ;      │
+            &kp GRAVE   &kp PLUS  &kp MINUS  &kp EQUAL  &kp SQT       &kp BACKSLASH  &kp LBKT   &kp RBKT  &kp COLON   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  1       │  2       │  3       │  4       │  5       │   │   6      │  7       │  8       │     9    │  0       │
             &kp N1    &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &kp N0
