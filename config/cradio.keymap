@@ -59,7 +59,7 @@
             //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │   ? /    │
                 &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH
             //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                        &lt LEF ESC   &mt LSHIFT TAB    &lt FOR ENTER  &lt RIG SPACE
+                                        &lt LEF ESC   &kp LSHIFT    &lt FOR ENTER  &lt RIG SPACE
             //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -76,7 +76,7 @@
             //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ? /      │
                 &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH
             //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                        &lt LEF ESC   &mt LSHIFT TAB   &lt FOR ENTER  &lt RIG SPACE
+                                        &lt LEF ESC   &kp LSHIFT   &lt FOR ENTER  &lt RIG SPACE
             //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
