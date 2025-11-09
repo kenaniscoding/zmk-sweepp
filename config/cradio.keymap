@@ -15,8 +15,8 @@
 #define HRML(k2,k3,k4)  &ht LGUI k2  &ht LALT k3  &ht LCTRL k4
 #define HRMR(k1,k2,k3) &ht RCTRL k1 &ht RALT k2 &ht RGUI k3 
 // Windows home row mods 
-#define WHRML(k2,k3,k4) &ht LGUI k2  &ht LALT k3  &ht LCTRL k4
-#define WHRMR(k1,k2,k3) &ht RCTRL k1 &ht RALT k2 &ht RGUI k3 
+/* #define WHRML(k2,k3,k4) &ht LGUI k2  &ht LALT k3  &ht LCTRL k4 */
+/* #define WHRMR(k1,k2,k3) &ht RCTRL k1 &ht RALT k2 &ht RGUI k3  */
 
 #define MAC 0
 #define WIN 1
