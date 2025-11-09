@@ -87,14 +87,14 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ ~        │ @        │ _        │ |        │  "       │   │          │          │          │          │   PSCRN  │
-            &kp TILDE &kp AT     &kp UNDER   &kp PIPE   &kp DQT         &kp F10     &kp F11     &kp F12    &trans      &kp PSCRN
+        //│ ~        │ @        │ _        │ |        │  "       │   │          │  &       │  "       │          │   PSCRN  │
+            &kp TILDE &kp AT     &kp UNDER   &kp PIPE   &kp DQT         &trans     &kp AMPS   &kp DQT   &trans      &kp PSCRN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │ TAB      |   |  LEFT    │   DOWN   │   UP     │   RIGHT  │          │
-            &kp LT    &kp GT     &kp LBRC    &kp RBRC   &kp TAB         &kp LARW    &kp DARW   &kp UARW   &kp RARW   &trans 
+            &trans    &kp F10     &kp F11    &kp F12     &kp TAB         &kp LARW    &kp DARW   &kp UARW   &kp RARW   &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │   DEL    │
-            &kp F1    &kp F2     &kp F3     &kp F4      &kp F5           &kp F6     &kp F7   &kp F8       &kp F9     &kp DEL 
+            &kp F1    &kp F2     &kp F3      &kp F4      &kp F5           &kp F6     &kp F7   &kp F8       &kp F9     &kp DEL 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -104,8 +104,8 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  `       │  +       │  -       │  =       │  '       │   │  \       │  [       │  ]       │  :       │   ;      │
-            &kp GRAVE   &kp PLUS  &kp MINUS  &kp EQUAL  &kp SQT       &kp BACKSLASH  &kp LBKT   &kp RBKT  &kp COLON   &kp SEMI
+        //│  `       │  +       │  -       │  =       │          │   │          │          │  '       │  :       │   ;      │
+            &kp GRAVE   &kp PLUS  &kp MINUS  &kp EQUAL  &trans        &trans      &trans     &kp SQT  &kp COLON   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  1       │  2       │  3       │  4       │  5       │   │   6      │  7       │  8       │     9    │  0       │
             &kp N1    &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &kp N0
@@ -144,7 +144,7 @@
         //│          │          │          │           │            │   │            │            │          │           │          │
     &trans &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans       &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP   &msc SCRL_RIGHT  &trans
         //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
-        //│          │          │          │           │            │   │            │            │          |           │          │
+        //│          │ <        │ {        │ [         │   (        │   │ )          │ ]          │ }        | >         │          │
         &trans     &kp LT    &kp LBRC    &kp LBKT     &kp LPAR           &kp RPAR      &kp RBKT    &kp RBRC   &kp GT     &trans
         //╰──────────┴──────────┴──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┴───────────┴──────────╯
                                                 &trans     &trans         &trans     &trans
