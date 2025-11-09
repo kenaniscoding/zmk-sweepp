@@ -145,7 +145,7 @@
       &trans &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP   &msc SCRL_RIGHT  &trans
         //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
         //│          │          │          │           │            │   │            │            │          |           │          │
-            &trans     &kp LT    &kp LBRC    &kp LBKT     &trans          &trans    &kp RBRT    &kp RBRC   &kp RT     &trans
+        &trans     &kp LT    &kp LBRC    &kp LBKT     &kp LPAR          &kp RPAR    &kp RBRT    &kp RBKC   &kp RT     &trans
         //╰──────────┴──────────┴──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┴───────────┴──────────╯
                                                 &trans     &trans         &trans     &trans
         //                                  ╰───────────┴──────────╯   ╰──────────┴────────────╯
