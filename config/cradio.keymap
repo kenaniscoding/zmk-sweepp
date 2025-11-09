@@ -90,7 +90,7 @@
         //│ ~        │ @        │ _        │ |        │  "       │   │          │          │          │          │   PSCRN  │
             &kp TILDE &kp AT     &kp UNDER   &kp PIPE   &kp DQT         &kp F10     &kp F11     &kp F12    &trans      &kp PSCRN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ <        │ >        │ {        │ }        │ TAB      |   |  LEFT    │   DOWN   │   UP     │   RIGHT  │          │
+        //│          │          │          │          │ TAB      |   |  LEFT    │   DOWN   │   UP     │   RIGHT  │          │
             &kp LT    &kp GT     &kp LBRC    &kp RBRC   &kp TAB         &kp LARW    &kp DARW   &kp UARW   &kp RARW   &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │   DEL    │
@@ -145,10 +145,11 @@
       &trans &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP   &msc SCRL_RIGHT  &trans
         //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
         //│          │          │          │           │            │   │            │            │          |           │          │
-      &trans  &trans   &trans     &trans     &trans                       &trans  &trans  &trans   &trans  &trans
+        &trans     &kp LT    &kp LBRC    &kp LBKT     &kp LPAR           &kp RPAR    &kp RBRT    &kp RBRC   &kp RT     &trans
         //╰──────────┴──────────┴──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┴───────────┴──────────╯
                                                 &trans     &trans         &trans     &trans
         //                                  ╰───────────┴──────────╯   ╰──────────┴────────────╯
+        //              &kp LT    &kp GT     &kp LBRC    &kp RBRC
             >;
         };
     };
