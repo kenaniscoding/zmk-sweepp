@@ -139,7 +139,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬───────────┬────────────╮   ╭────────────┬────────────┬──────────┬───────────┬──────────╮
         //│          │          │          │           │            │   │            │            │          │           │          │
-            &trans     &mkp MB1 &mmv MOVE_UP   &mkp MB2     &trans       &trans        &trans  &trans   &trans  &trans
+            &trans     &mkp MB1 &mmv MOVE_UP   &mkp MB2     &trans       &trans        &mkp MB1  &mkp MB2   &trans  &trans
         //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
         //│          │          │          │           │            │   │            │            │          │           │          │
     &trans &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans       &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP   &msc SCRL_RIGHT  &trans
