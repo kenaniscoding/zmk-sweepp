@@ -60,9 +60,9 @@
                 &kp A     HRML(S, D, F)                     &kp G          &kp H      HRMR(J, K, L)                    &kp BSPC            
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │   ? /    │
-                &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH
+                &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &ht RSHFT SLASH
             //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                         &lt LEF ESC   &mt LSHFT TAB      &lt FOR ENTER  &lt RIG SPACE
+                                         &lt LEF ESC   &ht LSHFT TAB      &lt FOR ENTER  &lt RIG SPACE
             //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
