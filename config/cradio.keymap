@@ -62,7 +62,7 @@
             //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │   ? /    │
                 &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &ht RSHFT SLASH
             //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &lt LEF ESC    &kp LSHFT       &lt FOR ENTER  &lt RIG SPACE
+                                              &lt LEF ESC    &kp LSHFT     &lt FOR ENTER  &lt RIG SPACE
             //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -76,10 +76,10 @@
             //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │   BSPC   │
                 &kp A     &kp S       &kp D       &kp F     &kp G          &kp H      &kp J      &kp K      &kp L      &kp BSPC           
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ? /      │
+            //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │    ? /   │
                 &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH
             //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                               &lt LEF ESC   &kp LSHFT        &lt FOR ENTER  &lt RIG SPACE
+                                               &kp SPACE   &kp LSHFT       &lt FOR ENTER  &lt RIG SPACE
             //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -96,7 +96,7 @@
         //│          │          │          │          │          │   │          │          │          │          │   DEL    │
             &kp F1    &kp F2     &kp F3      &kp F4      &kp F5           &kp F6     &kp F7   &kp F8       &kp F9     &kp DEL 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans        &trans     &trans
+                                        &lt LEF ESC    &kp LSHFT       &lt FOR ENTER  &lt RIG SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -113,7 +113,7 @@
         //│  !       │  @       │  #       │  $       │  %       │   │   ^      │  *       │          │          │          │
             &kp EXCL   &kp AT    &kp HASH   &kp DLLR    &kp PRCNT      &kp CARET  &kp STAR   &trans     &trans    &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &kp RSHIFT     &trans
+                                        &lt LEF ESC    &kp LSHFT       &kp RSHFT  &lt RIG SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -130,25 +130,25 @@
         //│          │          │          │           │  CLEAR BT  │   │ PROFILE 4  │ DEC BRIGHT │  MUTE    |           │ PREVSONG │
             &trans     &trans     &trans    &trans       &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &kp C_MUTE  &studio_unlock  &kp C_PREV
         //╰──────────┴──────────┴──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┴───────────┴──────────╯
-                                                &trans     &trans         &trans     &trans
-        //                                  ╰───────────┴──────────╯   ╰──────────┴────────────╯
+                                        &lt LEF ESC    &kp LSHFT       &lt FOR ENTER  &lt RIG SPACE
+        //                                   ╰───────────┴──────────╯   ╰──────────┴────────────╯
             >;
         };
 
         four_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬───────────┬────────────╮   ╭────────────┬────────────┬──────────┬───────────┬──────────╮
-        //│          │          │          │           │            │   │            │            │          │           │          │
-            &trans     &mkp MB1 &mmv MOVE_UP   &mkp MB2     &trans       &trans        &mkp MB1  &mkp MB2   &trans  &trans
+        //│  ESC     │          │          │           │            │   │            │            │          │           │          │
+            &kp ESC   &mkp MB1 &mmv MOVE_UP   &mkp MB2     &trans       &trans        &mkp MB1  &mkp MB2   &trans  &trans
         //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
-        //│          │          │          │           │            │   │            │            │          │           │          │
-    &trans &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans       &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP   &msc SCRL_RIGHT  &trans
+        //│          │          │          │           │    TAB     │   │            │            │          │           │          │
+    &trans &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp TAB      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP   &msc SCRL_RIGHT  &trans
         //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
         //│          │ <        │ {        │ [         │   (        │   │ )          │ ]          │ }        | >         │          │
-        &trans     &kp LT    &kp LBRC    &kp LBKT     &kp LPAR           &kp RPAR      &kp RBKT    &kp RBRC   &kp GT     &trans
+        &trans     &kp LT    &kp LBRC    &kp LBKT     &kp LPAR           &kp RPAR      &kp RBKT    &kp RBRC   &kp GT       &trans 
         //╰──────────┴──────────┴──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┴───────────┴──────────╯
-                                                &trans     &trans         &trans     &trans
-        //                                  ╰───────────┴──────────╯   ╰──────────┴────────────╯
+                                        &lt LEF ESC    &kp LSHFT       &lt FOR ENTER  &lt RIG SPACE
+        //                                   ╰───────────┴──────────╯   ╰──────────┴────────────╯
             >;
         };
     };
