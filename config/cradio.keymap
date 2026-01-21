@@ -113,7 +113,7 @@
         //│  !       │  @       │  #       │  $       │  %       │   │   ^      │  *       │          │          │          │
             &kp EXCL   &kp AT    &kp HASH   &kp DLLR    &kp PRCNT      &kp CARET  &kp STAR   &trans     &trans    &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                        &lt LEF ESC    &kp LSHFT       &kp RSHIFT  &lt RIG SPACE
+                                        &lt LEF ESC    &kp LSHFT       &kp RSHFT  &lt RIG SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
